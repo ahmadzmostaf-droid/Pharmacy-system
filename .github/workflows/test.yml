@@ -5,9 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Basic Login Test
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install and Run Tests
         run: |
-          echo "Testing Login Logic..."
-          ls index.html
-          ls app.js
-          echo "Login Validation Passed!"
+          cd Login_test
+          npm install
+          npm test
