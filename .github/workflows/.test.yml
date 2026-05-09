@@ -7,5 +7,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify Files
         run: |
-          ls index.html
+          npm test
           ls app.js
