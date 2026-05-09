@@ -1,5 +1,5 @@
-function validateLogin(username, password) {
-    if (username === "admin" && password === "123") {
+function validateLogin(user, pass) {
+    if (user === "admin" && pass === "123") {
         return true;
     }
     return false;

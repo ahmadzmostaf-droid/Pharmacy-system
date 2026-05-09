@@ -1,0 +1,23 @@
+{
+  "name": "pharmacy-system",
+  "version": "1.0.0",
+  "description": "Management System Project for University",
+  "main": "index.js",
+  "scripts": {
+  "test": "jest"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadzmostaf-droid/Pharmacy-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmadzmostaf-droid/Pharmacy-system/issues"
+  },
+  "homepage": "https://github.com/ahmadzmostaf-droid/Pharmacy-system#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
