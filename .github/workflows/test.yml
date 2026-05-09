@@ -1,16 +1,24 @@
-name: Phase_1_Testing
+name: Real_CI_Pipeline
 on: [push]
+
 jobs:
-  check:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install and Run Tests
+
+      - name: Install Dependencies
         run: |
           cd Login_test
-          npm install --save-dev jest
+          npm install
+
+      - name: Run Jest Tests
+        run: |
+          cd Login_test
           npm test
