@@ -1,4 +1,4 @@
-name: CI_Testing
+name: Phase_1_Testing
 on: [push]
 jobs:
   check:
@@ -12,5 +12,5 @@ jobs:
       - name: Install and Run Tests
         run: |
           cd Login_test
-          npm install
+          npm install --save-dev jest
           npm test

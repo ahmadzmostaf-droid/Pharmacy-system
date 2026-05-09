@@ -1,8 +1,6 @@
 {
   "name": "login-test",
   "version": "1.0.0",
-  "description": "Testing login logic for Pharmacy System",
-  "main": "app.js",
   "scripts": {
     "test": "jest"
   },
