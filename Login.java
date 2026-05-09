@@ -3,16 +3,25 @@ import java.util.Scanner;
 public class Login {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("--- Pharmacy Login System ---");
-        System.out.print("Username: ");
+        
+        System.out.println("====================================");
+        System.out.println("   PHARMACY MANAGEMENT SYSTEM       ");
+        System.out.println("====================================");
+        
+        System.out.print("Enter Username: ");
         String user = scanner.nextLine();
-        System.out.print("Password: ");
+        
+        System.out.print("Enter Password: ");
         String pass = scanner.nextLine();
 
-        if(user.equals("admin") && pass.equals("123")) {
-            System.out.println("Login Success!");
+        // استخدام equalsIgnoreCase للأمان، و equals للباسورد للدقة
+        if(user.equalsIgnoreCase("admin") && pass.equals("123")) {
+            System.out.println("\n[SUCCESS] Welcome, Administrator.");
+            System.out.println("Accessing Pharmacy Dashboard...");
         } else {
-            System.out.println("Login Failed!");
+            System.out.println("\n[ERROR] Invalid credentials. Access Denied.");
         }
+        
+        scanner.close(); // إضافة إغلاق السكنر (ممارسة برمجية جيدة)
     }
 }
