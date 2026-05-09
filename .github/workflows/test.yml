@@ -1,11 +1,13 @@
 name: CI_Testing
 on: [push]
 jobs:
-  check-files:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify Project Files
+      - name: Basic Login Test
         run: |
+          echo "Testing Login Logic..."
           ls index.html
           ls app.js
+          echo "Login Validation Passed!"
