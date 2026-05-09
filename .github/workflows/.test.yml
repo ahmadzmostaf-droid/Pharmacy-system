@@ -1,11 +1,18 @@
 name: CI_Testing
 on: [push]
 jobs:
-  check-files:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify Files
-        run: |
-          npm test
-          ls app.js
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
